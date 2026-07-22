@@ -1,0 +1,10 @@
+{
+  "name": "au-mortality-pipeline",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Data pipeline for au-mortality — dependency-free parse.mjs, mapshaper only for boundary simplification.",
+  "dependencies": {
+    "mapshaper": "^0.6.100"
+  }
+}

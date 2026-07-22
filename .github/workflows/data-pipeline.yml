@@ -1,0 +1,36 @@
+name: Data Pipeline
+
+on:
+  schedule:
+    # Source cadence: ANNUAL. The AIHW MORT books are republished once a year
+    # (the 2020-2024 edition landed mid-2026), so a yearly cron is the correct
+    # proportional cadence — anything faster just re-commits identical data.
+    # Staggered to 09 March at an off-hour so it doesn't collide with the fleet.
+    - cron: '43 4 9 3 *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['pipeline/**']
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # npm install, not npm ci — pipeline/ ships no lockfile (mapshaper only).
+      - run: cd pipeline && npm install
+      - run: node pipeline/collect.mjs
+      - run: node pipeline/aggregate.mjs
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git diff --cached --quiet || git commit -m "Update data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push || (git pull --rebase && git push)
