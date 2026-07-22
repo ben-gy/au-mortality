@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Hand-rolled SVG chart builders. No chart library — every mark here needs a
 // data-tip and a click target, which is easier to guarantee by building the
 // nodes directly than by fighting a library's render pipeline.

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Every piece of jargon this dataset forces on a reader, defined in plain
 // English. Assume the reader knows nothing: most people arrive here after a
 // local news story, not from a public-health degree.

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 import { barChart, panel, svgEl, viewHeader } from '../charts';
 import { histogram, median, rankRegions, type Bin } from '../analysis';
 import { LEVEL_PLURAL, LEVEL_PLURAL_INLINE, MEASURE_BY_KEY, type Dataset, type Level, type MeasureKey } from '../data';

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Cause x geography heatmap. Answers the question neither the causes list nor
 // the map can: do remote Australians die of DIFFERENT things, or the same
 // things sooner? (Both — and the matrix shows which is which.)

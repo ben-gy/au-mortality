@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Shape pipeline/tmp/* into the JSON the browser reads, and refuse to ship if
 // the numbers don't reconcile. All shaping logic lives in parse.mjs (tested);
 // this file is I/O, boundary simplification and the fail-the-build assertions.
